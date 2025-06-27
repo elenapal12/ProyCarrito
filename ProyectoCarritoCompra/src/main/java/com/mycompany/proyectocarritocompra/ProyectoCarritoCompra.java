@@ -4,6 +4,8 @@
 
 package com.mycompany.proyectocarritocompra;
 
+import java.util.Scanner;
+
 /**
  *
  * @author andrea/cecilia
@@ -67,4 +69,4 @@ case 2:
         sc.close();
     }
     }
-}
+
