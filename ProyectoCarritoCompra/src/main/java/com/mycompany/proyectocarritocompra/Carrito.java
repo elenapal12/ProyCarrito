@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectocarritocompra;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author andre
@@ -26,5 +28,13 @@ public class Carrito {
                 System.out.println("- " + p);
             }
         }
-    }   
+    } 
+    
+     public double calcularTotal() {
+        double total = 0;
+        for (Producto p : productos) {
+            total += p.precio;
+        }
+        return total;
+    }
 }
