@@ -40,6 +40,31 @@ public class ProyectoCarritoCompra {
                         System.out.println((i + 1) + ". " + catalogo[i]);
                     }
                     break;
+case 2:
+                    System.out.print("Ingrese el número del producto: ");
+                    int numProd = sc.nextInt();
+                    if (numProd >= 1 && numProd <= catalogo.length) {
+                        carrito.agregarProducto(catalogo[numProd - 1]);
+                    } else {
+                        System.out.println("Producto inválido.");
+                    }
+                    break;
+                case 3:
+                    carrito.mostrarCarrito();
+                    break;
+                case 4:
+                    System.out.println("Total a pagar: Bs " + carrito.calcularTotal());
+                    break;
+                case 5:
+                    System.out.println("Gracias por comprar con nosotros.");
+                    break;
+                default:
+                    System.out.println("Opción inválida.");
+            }
 
+        } while (opcion != 5);
+
+        sc.close();
+    }
     }
 }
