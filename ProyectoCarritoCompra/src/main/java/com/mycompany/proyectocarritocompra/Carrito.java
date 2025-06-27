@@ -10,4 +10,21 @@ package com.mycompany.proyectocarritocompra;
  */
 public class Carrito {
     
+ ArrayList<Producto> productos = new ArrayList<>();
+
+    public void agregarProducto(Producto producto) {
+        productos.add(producto);
+        System.out.println("Producto agregado: " + producto.nombre);
+    }
+
+    public void mostrarCarrito() {
+        if (productos.isEmpty()) {
+            System.out.println("El carrito está vacío.");
+        } else {
+            System.out.println("Contenido del carrito:");
+            for (Producto p : productos) {
+                System.out.println("- " + p);
+            }
+        }
+    }   
 }
